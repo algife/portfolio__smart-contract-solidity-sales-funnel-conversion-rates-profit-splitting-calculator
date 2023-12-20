@@ -1,11 +1,19 @@
 # Solidity Smart Contract: Sales Funnel Conversion Rates by Stage with Profit Splitting
 
-> This ethereum/solidity smart contract allows to calculate the conversion of each stage of a sales funnel, performing a final profitability calculation with revenue splitting between you and an affiliate, based on the parameters introduced such as:
+> This ethereum/solidity smart contract allows to calculate the conversion of each stage of a sales funnel, performing a final profitability calculation with revenue splitting between you and an affiliate.
+
+Some customizable parameters to make the calculation are:
 
 - initial audience
-- conversion rates by stage (3 stages).
 - sale value (Life-Time Value or price tag)
-- affiliate fee
+- conversion rates by stage (3 stages) -- scaled to 1000
+- affiliate fee -- scaled to 1000
+
+Some numeric values are scaled to 1000 to operate with them due to the fact that solidity doesn't supports fixed numeric types in this version.
+
+## Showcase
+
+![](https://github.com/algife/portfolio__smart-contract-solidity-sales-funnel-conversion-rates-profit-splitting-calculator/blob/main/showcase.gif)
 
 ## Other details
 
