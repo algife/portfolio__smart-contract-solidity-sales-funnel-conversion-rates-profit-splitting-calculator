@@ -11,8 +11,8 @@ to a sale at an average ticket specified (sale value)
 contract SalesFunnelProfitsCalc {
     uint16 private NON_FIXED_SCALE_FACTOR = 1000;
     uint32 private baseAudience = 500; // Consideration
-    uint32[] private resultsByStep = [200, 120, 50];
-    uint32[] private conversionRatesByStep = [
+    uint32[3] private resultsByStep = [200, 120, 50];
+    uint32[3] private conversionRatesByStep = [
         // (numbers scaled by the NON_FIXED_SCALE_FACTOR to bypass the fixed type)
         300, // Intent
         700, // Evaluation
@@ -68,11 +68,11 @@ contract SalesFunnelProfitsCalc {
         return baseAudience;
     }
 
-    function getConversionTotals() external view returns (uint32[] memory) {
+    function getConversionTotals() external view returns (uint32[3] memory) {
         return resultsByStep;
     }
 
-    function getConversionRates() external view returns (uint32[] memory) {
+    function getConversionRates() external view returns (uint32[3] memory) {
         return conversionRatesByStep;
     }
 
